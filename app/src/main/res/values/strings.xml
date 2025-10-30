@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">AP-GoogleMaps</string>
+    <string name="app_name">Mapa Familiar</string>
+    <string name="info_more">Toque para más información</string>
     <string name="google_maps_key">AIzaSyDiHCfCjzf-C8A8ZaYPknAQEoJ_WYTxhhk</string>
 </resources>

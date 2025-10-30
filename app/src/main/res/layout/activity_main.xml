@@ -20,16 +20,53 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mapa de práctica"
+            android:text="Mapa Familiar"
             android:gravity="center"
             android:textSize="18sp"
             android:padding="8dp"/>
 
-        <Button
-            android:id="@+id/button"
+        
+        <!-- Leyenda de categorías -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mostrar ubicación"/>
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Abuelos"
+                android:textColor="@color/grandparent"
+                android:textSize="13sp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Padres"
+                android:textColor="@color/parent"
+                android:textSize="13sp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Hermanos"
+                android:textColor="@color/sibling"
+                android:textSize="13sp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Tíos"
+                android:textColor="@color/aunt"
+                android:textSize="13sp"/>
+        </LinearLayout>
 
         <!-- Fragmento del mapa -->
         <androidx.fragment.app.FragmentContainerView
@@ -39,6 +76,37 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
+    </LinearLayout>
+
+    <!-- Controles de zoom superpuestos -->
+    <LinearLayout
+        android:id="@+id/zoomControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:background="#AAFFFFFF"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp">
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Zoom in"
+            android:src="@drawable/ic_zoom_in"/>
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Zoom out"
+            android:src="@drawable/ic_zoom_out"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
